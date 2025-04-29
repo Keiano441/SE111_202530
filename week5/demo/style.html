@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rick and Morty Portal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #00ffcc 0%, #003333 100%);
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    h1 {
+      font-size: 3em;
+      margin-top: 1em;
+      text-shadow: 2px 2px 5px #0ff;
+    }
+
+    .portal {
+      width: 300px;
+      height: 300px;
+      margin: 2em auto;
+      border-radius: 50%;
+      background: conic-gradient(#39ff14, #00ffcc, #39ff14, #00ffcc, #39ff14);
+      animation: spin 4s linear infinite;
+      box-shadow: 0 0 20px #39ff14, 0 0 40px #00ffcc;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .characters {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .character {
+      background: #222;
+      border: 2px solid #39ff14;
+      padding: 1em;
+      border-radius: 1em;
+      width: 150px;
+      box-shadow: 0 0 10px #39ff14;
+    }
+
+    .character h2 {
+      margin: 0.2em 0;
+      font-size: 1.2em;
+      color: #00ffcc;
+    }
+
+    .character p {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rick and Morty Universe</h1>
+  <div class="portal"></div>
+  <div class="characters">
+    <div class="character">
+      <h2>Rick</h2>
+      <p>Genius, alcoholic scientist. Kinda dangerous.</p>
+    </div>
+    <div class="character">
+      <h2>Morty</h2>
+      <p>Teenager. Easily stressed. Along for the ride.</p>
+    </div>
+  </div>
+</body>
+</html>
