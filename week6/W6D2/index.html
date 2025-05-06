@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keiano Rawlins">
+    <meta name="description" content="W6D2 - JS Pay Calculator">
+    
+    
+    <title>W6D2 | Pay Calculator</title>
+</head>
+<body>
+    
+    <h1>Week 6 | JS Pay Calculator </h1>
+
+    <script>
+        //prompt the user for hourly pay and hours worked
+        var hourlyPay = Number(prompt("Please enter your hourly pay:"));
+        var hoursWorked = Number(prompt("Please enter the total hours worked for two weeks:"));
+
+        //tax rate
+        var taxRate = 0.20;
+
+        // Calculates
+        var grossPay = hourlyPay * hoursWorked;
+        var taxAmount = grossPay * taxRate;
+        var netPay = grossPay - taxAmount;
+
+        //roundto 2 decimal 
+        var grossPayFormatted = grossPay.toFixed(2);
+        var taxAmountFormatted = taxAmount.toFixed(2);
+        var netPayFormatted = netPay.toFixed(2);
+
+        //display in console
+        console.log(`Gross Pay: $${grossPayFormatted}`);
+        console.log(`Uncle Sam's Share: $${taxAmountFormatted}`);
+        console.log(`Net Pay: $${netPayFormatted}`);
+
+        //display in alert
+        alert(`Gross Pay: $${grossPayFormatted}\nUncle Sam's Share: $${taxAmountFormatted}\nNet Pay: $${netPayFormatted}`);
+    </script>
+</body>
+</html>
