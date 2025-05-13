@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>W7D2 - Riddles </h1>
+    <!--riddles area - each riddle will be found within th div -->
+    <!-- each div would have :
+     
+            a div character 
+            an <H>3 with the riddle/ questions 
+            an input = text to allow user to guess 
+            an input type submit to allow the user to revel the answer 
+            a span to hild the answer 
+    -->
+
+
+    <div class = "question-box ">
+
+        <h3 class="questions">1. what can travel the world wiithout leaving its place </h3>
+
+        <input type="submit" value="Reveal Answer" id="submit1">
+        <p class="answers" ><span id="answer1"></span> </p>
+
+        <hr>
+
+    </div>
+
+    <div class = "question-box ">
+
+        <h3 class="questions">2. What goes up a chimney down but wont do down a chimney up</h3>
+
+        <input type="submit" value="Reveal Answer" id="submit ">
+        <p class="answer" ><span id="answer2"></span> </p>
+
+        <hr>
+
+    </div>
+
+    <!--in doucment JS below -->
+    <script>
+
+        //tie the submit button to an event 
+        document.querySelector(`#submit`).addEventListener(`click`, answerOne)
+
+        function answerOne(event)//
+        {
+
+            //select and stores the approiate span tage for the questions (will hold and write the answer to the plage later)
+            var span1 = document.querySelector(`#answer1`)
+
+            //declare and store the riddle answer to a variable
+            var answer = `A Stamp`
+
+            //get user answer
+            var userAnswer = document.querySelector(`#question1`).value
+
+zz
+
+            //write the riddle answer to the span tage element using .innerHTML porperty (attribute)
+    
+            span1.innerHTML = answer
+
+        }
+
+
+
+
+                //tie the submit button to an event 
+        document.querySelector(`#submit`).addEventListener(`click`, answerOne)
+
+        function answerOne(event)//
+        {
+
+            //select and stores the approiate span tage for the questions (will hold and write the answer to the plage later)
+            var span1 = document.querySelector(`#answer1`)
+
+            //declare and store the riddle answer to a variable
+            var answer = `A Stamp`
+
+            //write the riddle answer to the span tage element using .innerHTML porperty (attribute)
+            span1.innerHTML = answer
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>
